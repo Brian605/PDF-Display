@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/displayFragment">
+
+    <fragment
+        android:id="@+id/displayFragment"
+        android:name="com.return0.filesviewer.DisplayFragment"
+        android:label="Files List"
+        tools:layout="@layout/fragment_display" >
+           <action
+            android:id="@+id/action_displayFragment_to_viewerActivity"
+            app:destination="@id/viewerActivity" />
+    </fragment>
+    <activity
+        android:id="@+id/viewerActivity"
+        android:name="com.return0.filesviewer.ViewerActivity"
+        android:label="Viewer Activity"
+        tools:layout="@layout/fragment_viewer"/>
+
+</navigation>
